@@ -11,21 +11,35 @@ public class Customer : MonoBehaviour
     }
 
     private Species _species;
-    private string[] _dialogues;
+    [SerializeField] private DialogueData _dialogueData;
+    private DialogueData.DialoguePattern _currentPattern;
+    private int _dialogueIndex;
 
-    public void Initialize(Species species, string[] dialogues)
+    private void Start()
     {
-        _species = species;
-        _dialogues = dialogues;
+        // 登録されている会話パターンからランダムで1つ選ぶ
+        int randomIndex = Random.Range(0, _dialogueData._patterns.Length);
+        _currentPattern = _dialogueData._patterns[randomIndex];
+        _dialogueIndex = 0;
     }
 
-    public Species GetSpecies()
+    // 現在のセリフを取得
+    public string GetCurrentDialogue()
     {
-        return _species;
+        return _currentPattern._dialogues[_dialogueIndex];
     }
 
-    public string GetDialogue(int index)
+    // 次のセリフへ進む
+    public bool NextDialogue()
     {
-        return _dialogues[index];
+        _dialogueIndex++;
+
+        // 3つ目まで終わったらfalse
+        if (_dialogueIndex >= 3)
+        {
+            return false;
+        }
+
+        return true;
     }
 }
