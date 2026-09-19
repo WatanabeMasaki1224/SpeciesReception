@@ -15,11 +15,16 @@ public class Customer : MonoBehaviour
     private DialogueData.DialoguePattern _currentPattern;
     private int _dialogueIndex;
 
-    private void Start()
+    private void Awake()
     {
-        // 登録されている会話パターンからランダムで1つ選ぶ
+        Debug.Log("_dialogueData : " + _dialogueData);
+
         int randomIndex = Random.Range(0, _dialogueData._patterns.Length);
+
         _currentPattern = _dialogueData._patterns[randomIndex];
+
+        Debug.Log("_currentPattern : " + _currentPattern);
+
         _dialogueIndex = 0;
     }
 

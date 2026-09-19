@@ -10,6 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 205355da57162b640b875545d6801ced, type: 3}
-  m_Name: DialogueData
+  m_Name: Human
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  _patterns: []
+  _patterns:
+  - _dialogues:
+    - "\u3042\u3055"
+    - "\u306D\u305F"
+    - "\u3088"
+  - _dialogues:
+    - "\u3064\u304B"
+    - "\u308C\u305F"
+    - "\u3088"
+  - _dialogues:
+    - "\u306D\u3080"
+    - "\u308C"
+    - "\u306A\u3044\u3088"
