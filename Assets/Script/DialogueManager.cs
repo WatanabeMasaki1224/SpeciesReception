@@ -41,6 +41,13 @@ public class DialogueManager : MonoBehaviour
     {
         Customer.Species selectedSpecies = (Customer.Species)species;
 
-        Debug.Log("‘I‘ğ‚µ‚½í‘°F" + selectedSpecies);
+        if (selectedSpecies == _customer.GetSpecies())
+        {
+            Debug.Log("³‰ğ");
+        }
+        else
+        {
+            Debug.Log("•s³‰ğ");
+        }
     }
 }

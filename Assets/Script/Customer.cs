@@ -10,7 +10,7 @@ public class Customer : MonoBehaviour
         Kappa
     }
 
-    private Species _species;
+    [SerializeField] private Species _species;
     [SerializeField] private DialogueData _dialogueData;
     private DialogueData.DialoguePattern _currentPattern;
     private int _dialogueIndex;
@@ -46,5 +46,10 @@ public class Customer : MonoBehaviour
         }
 
         return true;
+    }
+
+    public Species GetSpecies()
+    {
+        return _species;
     }
 }
