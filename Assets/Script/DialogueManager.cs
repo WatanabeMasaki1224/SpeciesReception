@@ -6,10 +6,13 @@ public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _dialogueText;
     [SerializeField] private Button _nextButton;
-    [SerializeField]private Customer _customer;
+    [SerializeField] private CustomerManager _customerManager;
+    private Customer _customer;
+    [SerializeField] private ScoreManager _scoreManager;
 
     public void Start()
     {
+        _customer = _customerManager.GetFrontCustomer();
         StartDialogue(_customer);
     }
 
@@ -44,10 +47,20 @@ public class DialogueManager : MonoBehaviour
         if (selectedSpecies == _customer.GetSpecies())
         {
             Debug.Log("ê≥â");
+            _scoreManager.AddScore(100);
+            
         }
         else
         {
             Debug.Log("ïsê≥â");
+            _scoreManager.AddScore(0);
         }
+
+        NextCustomer();
+    }
+
+    private void NextCustomer()
+    {
+        Debug.Log("éüÇÃãqÇ÷");
     }
 }
