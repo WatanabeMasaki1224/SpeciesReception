@@ -61,6 +61,10 @@ public class DialogueManager : MonoBehaviour
 
     private void NextCustomer()
     {
-        Debug.Log("Ÿ‚Ì‹q‚Ö");
+        _customerManager.RemoveCustomer();
+        // V‚µ‚­æ“ª‚É‚È‚Á‚½‹q‚ğæ“¾
+        _customer = _customerManager.GetFrontCustomer();
+        // Ÿ‚Ì‹q‚Ì‰ï˜b‚ğŠJn
+        StartDialogue(_customer);
     }
 }
