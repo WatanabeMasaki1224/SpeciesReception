@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private CustomerManager _customerManager;
     private Customer _customer;
     [SerializeField] private ScoreManager _scoreManager;
+    [SerializeField] private GameObject _speciesButtons;
 
     public void Start()
     {
@@ -21,6 +22,7 @@ public class DialogueManager : MonoBehaviour
         _customer = customer;
         _dialogueText.text = _customer.GetCurrentDialogue();
         _nextButton.gameObject.SetActive(true);
+        _speciesButtons.SetActive(true);
     }
 
     public void OnNextButton()
@@ -55,7 +57,7 @@ public class DialogueManager : MonoBehaviour
             Debug.Log("ïsê≥â");
             _scoreManager.AddScore(0);
         }
-
+        _speciesButtons.SetActive(false);
         NextCustomer();
     }
 
