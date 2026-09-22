@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameClearManager : MonoBehaviour
 {
@@ -17,5 +18,10 @@ public class GameClearManager : MonoBehaviour
         _gameClearPamel.SetActive(true);
         int score = _scoreManager.GetScore();
         _resultScoreText.text = $"Score : {score}";
+    }
+
+    public void RestartGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

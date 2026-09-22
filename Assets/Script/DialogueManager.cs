@@ -49,13 +49,13 @@ public class DialogueManager : MonoBehaviour
         if (selectedSpecies == _customer.GetSpecies())
         {
             Debug.Log("³‰ğ");
-            _scoreManager.AddScore(100);
+            _scoreManager.AddScore();
             
         }
         else
         {
             Debug.Log("•s³‰ğ");
-            _scoreManager.AddScore(0);
+            _scoreManager.ResetCombo();
         }
         _speciesButtons.SetActive(false);
         NextCustomer();
