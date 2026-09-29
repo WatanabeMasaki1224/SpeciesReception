@@ -52,7 +52,7 @@ public class CustomerManager : MonoBehaviour
         // Žc‚Á‚½‹q‚ð1‚Â‘O‚É‹l‚ß‚é
         for (int i = 0; i < _customers.Count; i++)
         {
-            _customers[i].transform.position = _customerPositions[i].position;
+            _customers[i].MoveTo(_customerPositions[i].position);
         }
 
         // ˆê”ÔŒã‚ë‚ÉV‚µ‚¢‹q‚ð’Ç‰Á

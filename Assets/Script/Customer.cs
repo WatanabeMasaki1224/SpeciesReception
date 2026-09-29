@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Customer : MonoBehaviour
@@ -14,17 +15,12 @@ public class Customer : MonoBehaviour
     [SerializeField] private DialogueData _dialogueData;
     private DialogueData.DialoguePattern _currentPattern;
     private int _dialogueIndex;
+    [SerializeField] private float _moveTime = 1f;
 
     private void Awake()
     {
-        Debug.Log("_dialogueData : " + _dialogueData);
-
         int randomIndex = Random.Range(0, _dialogueData._patterns.Length);
-
         _currentPattern = _dialogueData._patterns[randomIndex];
-
-        Debug.Log("_currentPattern : " + _currentPattern);
-
         _dialogueIndex = 0;
     }
 
@@ -51,5 +47,33 @@ public class Customer : MonoBehaviour
     public Species GetSpecies()
     {
         return _species;
+    }
+
+    public void MoveTo(Vector3 targetPosition)
+    {
+        StartCoroutine(MoveCoroutine(targetPosition));
+    }
+
+    private IEnumerator MoveCoroutine(Vector3 targetPosition)
+    {
+        Vector3 startPosition = transform.position;
+        float elapsedTime = 0f;
+
+        while (elapsedTime < _moveTime)
+        {
+            elapsedTime += Time.deltaTime;
+
+            float t = elapsedTime / _moveTime;
+
+            transform.position = Vector3.Lerp(
+                startPosition,
+                targetPosition,
+                t
+            );
+
+            yield return null;
+        }
+
+        transform.position = targetPosition;
     }
 }
