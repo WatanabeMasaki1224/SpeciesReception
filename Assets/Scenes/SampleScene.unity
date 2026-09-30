@@ -1868,10 +1868,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomerManager
   _customerPrefabs:
-  - {fileID: 912323166350029071, guid: 4d45f45698d0bb741934648fda907a9f, type: 3}
-  - {fileID: 5357880785156560658, guid: 63ded6459f009cd418f8394412426971, type: 3}
-  - {fileID: 5710208605555314387, guid: e770cfafac7ef6e4b82eb3e2810c8f11, type: 3}
-  - {fileID: 8018720934755791633, guid: f3c5a6a3f0c634b4ca7946a988354336, type: 3}
+  - {fileID: 133217054741088871, guid: 4d45f45698d0bb741934648fda907a9f, type: 3}
+  - {fileID: 666841731192263198, guid: 3cf98dccd3f46094b910fbde714d078b, type: 3}
+  - {fileID: 1982216150874547545, guid: f3c5a6a3f0c634b4ca7946a988354336, type: 3}
+  - {fileID: 751179355154940600, guid: e770cfafac7ef6e4b82eb3e2810c8f11, type: 3}
   _customerPositions:
   - {fileID: 1742578122}
   - {fileID: 356261544}

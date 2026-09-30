@@ -16,6 +16,7 @@ public class Customer : MonoBehaviour
     private DialogueData.DialoguePattern _currentPattern;
     private int _dialogueIndex;
     [SerializeField] private float _moveTime = 1f;
+    [SerializeField] private Animator _animator;
 
     private void Awake()
     {
@@ -58,6 +59,7 @@ public class Customer : MonoBehaviour
     {
         Vector3 startPosition = transform.position;
         float elapsedTime = 0f;
+        _animator.Play("Run");
 
         while (elapsedTime < _moveTime)
         {
@@ -75,5 +77,6 @@ public class Customer : MonoBehaviour
         }
 
         transform.position = targetPosition;
+        _animator.Play("Idle");
     }
 }

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &9132589958355028112
+--- !u!1001 &3629564942568295450
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8242d247159ec462794ba075ca8c938e, type: 3}
       propertyPath: m_Name
-      value: Ghost
+      value: Vampire
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -58,24 +58,24 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8242d247159ec462794ba075ca8c938e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 4204383795165371630}
+      addedObject: {fileID: 4994167033918676697}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8242d247159ec462794ba075ca8c938e, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 751179355154940600}
+      addedObject: {fileID: 666841731192263198}
   m_SourcePrefab: {fileID: 100100000, guid: 8242d247159ec462794ba075ca8c938e, type: 3}
---- !u!1 &8249490607114827201 stripped
+--- !u!1 &4512509812557459787 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8242d247159ec462794ba075ca8c938e, type: 3}
-  m_PrefabInstance: {fileID: 9132589958355028112}
+  m_PrefabInstance: {fileID: 3629564942568295450}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &4204383795165371630
+--- !u!95 &4994167033918676697
 Animator:
   serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8249490607114827201}
+  m_GameObject: {fileID: 4512509812557459787}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 2b2efa1448836f94ca849697d53daf7a, type: 2}
@@ -90,19 +90,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &751179355154940600
+--- !u!114 &666841731192263198
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8249490607114827201}
+  m_GameObject: {fileID: 4512509812557459787}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b5818bac34c28274480402e2f8910914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Customer
-  _species: 2
+  _species: 1
   _dialogueData: {fileID: 11400000, guid: c51a401a8f5a3d440802d88c9304fa3f, type: 2}
   _moveTime: 1
-  _animator: {fileID: 4204383795165371630}
+  _animator: {fileID: 4994167033918676697}
